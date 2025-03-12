@@ -1,0 +1,61 @@
+@use '../abstract/index' as * ;
+
+
+.hero{
+    @include flex(center, flex-start, column);
+    background-image: url('../../src/img/hero.jpg');
+    padding: 0;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+    &__name{
+        font-size: 20px;
+        color: #fff;
+        font-weight: 300;
+    }
+
+    &__heading{
+        color: #fff;
+        font-size: 60px;
+        line-height: 90px;
+        font-weight: 400;
+        margin: 2rem 0;
+        max-width: 650px;
+    }
+
+    &__btn{
+        position: relative;
+        background-color: $secondary-color;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        padding: 10px 38px;
+        border: 2px solid transparent;
+        text-transform: capitalize;
+        display: inline-block;
+        margin-top: 3px;
+
+        &:hover{
+            background-color: $primary-color;
+        }
+
+        &:hover::before{
+            left: -100px;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: -60px;
+            top: 50%;
+            width: 85px;
+            height: 2px;
+            background: #fff;
+            bottom: 0;
+            transform: translateY(-50%);
+            transition: all .3s;
+            -webkit-transition: all .3s;
+        }
+    }
+}

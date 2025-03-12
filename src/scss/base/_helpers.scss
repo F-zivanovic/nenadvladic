@@ -1,0 +1,14 @@
+@use "../abstract/index" as *;
+
+
+.container {
+  width: 80%;
+  margin: auto;
+
+  @include rwd(576) {
+    width: 90%;
+  }
+}
+
+
+

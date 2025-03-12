@@ -1,0 +1,88 @@
+@use '../abstract/index' as * ;
+
+.contact{
+    background:  
+    linear-gradient(180deg, rgba(21,26,48,0.9) 0%, #070c26 100%), url('../../src/img/contact.jpg')
+    ;
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__item{
+        flex: 0 0 47%;
+    }
+
+    &__heading{
+        font-size: 36px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: relative;
+    font-weight: 500;
+    color: white;
+    }
+
+    &__p{
+        margin-top: 30px;
+    color: #ddd;
+    line-height: 30px;
+    font-size: 1rem;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__box{
+        display: flex;
+        justify-content: space-between;
+
+        input{
+            width: 47%;
+        }
+    }
+
+    &__input{
+        background: rgba(192, 181, 150, .2);
+    height: 50px;
+    padding: 6px 15px;
+    color: #fff;
+    border: 2px solid #454545;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(192, 181, 150, .5);
+
+    &::placeholder{
+        font-size: 1.1rem;
+    }
+    }
+
+    textarea{
+        height: 150px;
+    }
+
+    &__btn{
+        position: relative;
+        background-color: $secondary-color;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        padding: 10px 38px;
+        border: 2px solid transparent;
+        text-transform: capitalize;
+        display: inline-block;
+        margin-top: 3px;
+        cursor: pointer;
+        transition: 0.4s linear;
+        align-self: flex-start;
+
+        &:hover{
+            background-color: $primary-color;
+        }
+    }
+}
