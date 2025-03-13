@@ -14,12 +14,16 @@
 
     &__contact{
         display: flex;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     &__info{
         color: #fff;
         font-size: 0.9rem;
+
+        &:hover{
+            color: $secondary-color;
+        }
 
         .fa-solid{
             color: $secondary-color;
@@ -48,20 +52,60 @@
     }
 
     &__logo{
-        width: 220px;
+        width: 120px;
+        height: 15vh;
     }
 
     &__list{
         display: flex;
         gap: 2rem;
+
+        @include rwd(992){
+            display: none;
+        }
     }
 
     &__item{
-        height: 10vh;
         display: flex;
         align-items: stretch;
-        line-height: 10vh;
-        
+        line-height: 15vh;
+
+        &--dropdown{
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+
+            &:hover > .nav__dropdown{
+                display: flex;
+            }
+
+            span{
+                color: #fff;
+            }
+        }
+    }
+
+    &__dropdown{
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        width: 170px;
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+        display: none;
+
+        a{
+            color: $primary-color;
+            text-transform: capitalize;
+            
+            &:hover{
+                color: $secondary-color;
+            }
+        }
     }
 
     &__link{
@@ -70,8 +114,20 @@
         font-weight: 600;
         
         &:hover,
-        &.active{
+        &.active,
+        &:hover + span{
             color: $secondary-color;
+        }
+    }
+
+    &__hamburger{
+        color: $secondary-color;
+        font-size: 2rem;
+        cursor: pointer;
+        display: none !important;
+
+        @include rwd(992){
+            display: block !important;
         }
     }
 }

@@ -10,5 +10,27 @@
   }
 }
 
+.section-heading{
+  font-size: 2rem;
+  color: #333;
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+  position: relative;
+  font-weight: 500;
+  text-align: center;
+
+    &::before{
+      @include position(absolute, auto, auto, 0, 48%, 60px, 3px);
+      background: $secondary-color;
+      content: "";
+    }
+}
+
+.section-subheading{
+  font-size: 16px;
+  color: #ada282;
+  text-align: center;
+}
+
 
 

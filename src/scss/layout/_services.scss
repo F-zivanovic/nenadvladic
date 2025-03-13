@@ -4,80 +4,54 @@
 .services{
     background-color: #f9f9f9;
 
-    &__subheading{
-        font-size: 16px;
-        color: #ada282;
-    text-align: center;
-
-    }
-
-    &__heading{
-        font-size: 36px;
-        color: #333;
-        padding-bottom: 20px;
-        margin-bottom: 60px;
-        position: relative;
-        text-transform: inherit;
-        font-weight: 500;
-    text-align: center;
-
-
-        &::before{
-            content: "";
-            position: absolute;
-            left: 48%;
-            bottom: 0;
-            width: 60px;
-            height: 3px;
-            background: #c0b596;
-        }
-    }
-
     &__wrapper{
+        @include flex(space-between, stretch, wrap);
         margin-top: 3rem;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
         row-gap: 3rem;
     }
     
     &__item{
         flex: 0 0 30%;
-        display: flex;
-        gap: 2rem;
-        align-items: center;
+
+        @include rwd(992){
+            flex: 0 0 45%;
+        }
+
+        @include rwd(768){
+            flex: 0 0 100%;
+        }
     }
 
-    img{
-        padding: 0;
+    i{
         border: 1px solid rgba(192, 181, 150, .5);
         border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        line-height: 75px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 1.2rem;
         text-align: center;
     }
 
     &__title{
         color: #373737;
-    font-size: 24px;
-    padding-bottom: 10px;
-    position: relative;
-    margin-bottom: 10px;
-    margin-top: 0;
+        font-size: 24px;
+        padding-bottom: 10px;
+        position: relative;
+        margin-bottom: 10px;
+        margin-top: 0;
 
-    &::before{
-        position: absolute;
-        content: "";
-        left: 0;
-        bottom: 0;
-        width: 30px;
-        height: 2px;
-        background: #c0b596;
-    }
+        &::before{
+            @include position(absolute, auto, auto, 0, 0, 30px, 2px);
+            background: $secondary-color;
+            content: "";
+        }
     }
 
-    &__p{
-        font-size: 15px;
+    &__link{
+        color: $primary-color;
+        display: inline-block;
+        margin-top: 1rem;
+
+        &:hover{ color: $secondary-color; }
     }
 }

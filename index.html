@@ -18,56 +18,74 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Flaticon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css">
+
 </head>
 
 <body>
 
-    <!-- <span class="fa-solid fa-angle-down" aria-hidden="true"></span> -->
 
     <!-- Nav section starts -->
     <nav class="nav">
         <div class="nav__wrapper container">
             <div class="nav__top">
                 <div class="nav__contact">
-                    <div class="nav__info">
+                    <a href="https://maps.app.goo.gl/rJCCgAY5VmrCv8dz5" class="nav__info">
                         <span class="fa-solid fa-location-dot"></span>
                         Bulevar kralja Aleksandra 195a, Beograd
-                    </div>
-                    <div class="nav__info">
+                    </a>
+
+                    <a href="tel:+381 60 31 32 994" class="nav__info">
                         <span class="fa-solid fa-phone"></span>
-                            0603132994
-                    </div>
-                    <div class="nav__info">
+                            +381 60 31 32 994
+                    </a>
+                    <a href="mailto:advokatvladic@gmail.com" class="nav__info">
                         <span class="fa-solid fa-envelope"></span>
                         advokatvladic@gmail.com
-                    </div>
+                    </a>
                 </div>
-                <a href="#" class="nav__btn">Besplatne konsultacije</a>
+                <a href="#contact" class="nav__btn">Besplatne konsultacije</a>
             </div>
+
             <div class="nav__bottom">
                 <a href="index.html" class="nav__logo">
-                    <img src="src/img/logo.png" alt="website logo">
+                    <img src="src/img/ADV logo.png" alt="website logo">
                 </a>
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="" class="nav__link active">početna</a>
+                        <a href="index.html" class="nav__link active">početna</a>
                     </li>
                     <li class="nav__item">
-                        <a href="" class="nav__link">o nama</a>
+                        <a href="#about" class="nav__link">o nama</a>
+                    </li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="#services" class="nav__link">usluge</a>
+                        <span class="fa-solid fa-angle-down"></span>
+
+                        <div class="nav__dropdown">
+                            <a href="#">radno pravo</a>
+                            <a href="#">privredno pravo</a>
+                            <a href="#">imovinsko pravo</a>
+                            <a href="#">nasledno pravo</a>
+                            <a href="#">porodično pravo</a>
+                            <a href="#">kazneno pravo</a>
+                        </div>
                     </li>
                     <li class="nav__item">
-                        <a href="" class="nav__link">kontakt</a>
+                        <a href="#contact" class="nav__link">kontakt</a>
                     </li>
                     <li class="nav__item">
-                        <a href="" class="nav__link">blog</a>
+                        <a href="#blog" class="nav__link">blog</a>
                     </li>
                     <li class="nav__item">
-                        <a href="" class="nav__link">Klijenti</a>
+                        <a href="#clients" class="nav__link">Klijenti</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="" class="nav__link">usluge</a>
-                    </li>
+                    
                 </ul>
+
+                <i class="fa-solid fa-bars-staggered nav__hamburger"></i>
             </div>
         </div>
     </nav>
@@ -75,104 +93,139 @@
 
 
     <!-- Hero section starts -->
-    <section class="hero">
+    <header class="hero">
         <div class="hero__wrapper container">
-            <p class="hero__name">Advokat Nenad Vladić</p>
             <h1 class="hero__heading">Advokatska kancelarija Vladić Beograd</h1>
-            <a href="#contact" class="hero__btn">Kontakt</a>
+            <a href="#contact" class="hero__btn" role="button">Kontakt</a>
         </div>
-    </section>
+    </header>
     <!-- Hero section ends -->
 
 
+
+
+
     <!-- About section starts -->
-    <section class="about container">
+    <section class="about container" id="about">
         <article class="about__item about__item--holder">
             <img src="src/img/nenad.jpg" alt="" class="about__img">
         </article>
         <article class="about__item">
-            <h2 class="about__heading">about us</h2>
+            <h2 class="about__heading">O nama – Advokatska kancelarija Vladić Beograd</h2>
             <p class="about__p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at</p>
             <p class="about__p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at</p>
-            <a href="" class="about__btn">more about us</a>
         </article>
     </section>
     <!-- About section ends -->
 
 
+
+
+
     <!-- Services section starts -->
     <section class="services" id="services">
-        <p class="services__subheading">How Can We Help You</p>
-        <h2 class="services__heading">Area Of Practice</h2>
+        <p class="section-subheading">How Can We Help You</p>
+        <h2 class="section-heading">Area Of Practice</h2>
         <div class="services__wrapper container">
             <article class="services__item">
-                <img src="src/img/parents.png" alt="">
-                <div class="services__body">
-                    <h3 class="services__title">Radno pravo</h3>
-                    <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
-                </div>
+                <i class="fa-solid fa-briefcase"></i>
+                <h3 class="services__title">Radno pravo</h3>
+                <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
+                <a href="#" class="services__link">Vidi više</a>
             </article>
+
             <article class="services__item">
-                <img src="src/img/parents.png" alt="">
-                <div class="services__body">
-                    <h3 class="services__title">Imovinsko pravo</h3>
-                    <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
-                </div>
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3 class="services__title">Imovinsko pravo</h3>
+                <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
+                <a href="#" class="services__link">Vidi više</a>
             </article>
+
             <article class="services__item">
-                <img src="src/img/parents.png" alt="">
-                <div class="services__body">
-                    <h3 class="services__title">Porodično pravo</h3>
-                    <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
-                </div>
+                <i class="fa-solid fa-people-roof"></i>
+                <h3 class="services__title">Porodično pravo</h3>
+                <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
+                <a href="#" class="services__link">Vidi više</a>
             </article>
+
             <article class="services__item">
-                <img src="src/img/parents.png" alt="">
-                <div class="services__body">
-                    <h3 class="services__title">Nasledno pravo</h3>
-                    <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
-                </div>
+                <i class="fa-solid fa-gavel"></i>
+                <h3 class="services__title">Nasledno pravo</h3>
+                <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
+                <a href="#" class="services__link">Vidi više</a>
             </article>
+
             <article class="services__item">
-                <img src="src/img/parents.png" alt="">
-                <div class="services__body">
-                    <h3 class="services__title">Privredno pravo</h3>
-                    <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
-                </div>
+                <i class="fa-solid fa-folder-open"></i>
+                <h3 class="services__title">Privredno pravo</h3>
+                <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
+                <a href="#" class="services__link">Vidi više</a>
             </article>
+
             <article class="services__item">
-                <img src="src/img/parents.png" alt="">
-                <div class="services__body">
-                    <h3 class="services__title">Kazneno pravo</h3>
-                    <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
-                </div>
+                <i class="fa-solid fa-balance-scale"></i> 
+                <h3 class="services__title">Kazneno pravo</h3>
+                <p class="services__p">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain</p>
+                <a href="#" class="services__link">Vidi više</a>
             </article>
-   
         </div>
     </section>
     <!-- Services section ends -->
 
+
+
+
+
     <!-- Contact section starts -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact__wrapper container">
             <article class="contact__item">
-                <div class="contact__p">
-                    <h2 class="contact__heading">Besplatno savetovanje</h2>
+                <h2 class="contact__heading">Besplatno savetovanje</h2>
+                <div class="contact__text">
                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less able English content of a page.
                 </div>
+              <ul class="contact__list">
+                <li>
+                    <a href="https://www.instagram.com/adv.vladic/" class="contact__social">
+                        <span class="fa-brands fa-instagram"></span>instagram
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com/vladicnenad" class="contact__social">
+                        <span class="fa-brands fa-facebook"></span>facebook
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/nenad-vladi%C4%87-801a46167/" class="contact__social">
+                        <span class="fa-brands fa-linkedin"></span>linkedin
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:advokatvladic@gmail.com" class="contact__social">
+                        <span class="fa-solid fa-envelope"></span>Email
+                    </a>
+                </li>
+              </ul>
             </article>
-            <form action="" class="contact__item">
+
+            <form action="" class="contact__item contact__item--form">
                 <div class="contact__box">
-                    <input type="text" class="contact__input" placeholder="Ime">
-                    <input type="text" class="contact__input" placeholder="Telefon">
+                    <input type="text" class="contact__input" placeholder="Ime" required>
+                    <input type="text" class="contact__input" placeholder="Telefon" required>
                 </div>
-                <input type="email" class="contact__input" placeholder="Email">
-                <textarea name="" class="contact__input" placeholder="Opis problema"></textarea>
+                <input type="email" class="contact__input" placeholder="Email" required>
+                <textarea class="contact__input" placeholder="Opis problema" required></textarea>
                 <button class="contact__btn">Zakaži</button>
             </form>
         </div>
     </section>
     <!-- Contact section ends -->
+
+
+
 
 
     <!-- Footer section starts -->
