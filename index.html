@@ -53,18 +53,18 @@
                 <a href="index.html" class="nav__logo">
                     <img src="src/img/ADV logo.png" alt="website logo">
                 </a>
-                <ul class="nav__list">
+                <ul class="nav__list" id="nav-list">
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link active">početna</a>
+                        <a href="index.html" class="nav__link">početna</a>
                     </li>
                     <li class="nav__item">
                         <a href="#about" class="nav__link">o nama</a>
                     </li>
                     <li class="nav__item nav__item--dropdown">
-                        <a href="#services" class="nav__link">usluge</a>
+                        <a href="#" class="nav__link" id="drodpwon-active">usluge</a>
                         <span class="fa-solid fa-angle-down"></span>
 
-                        <div class="nav__dropdown">
+                        <div class="nav__dropdown" id="dropddown">
                             <a href="#">radno pravo</a>
                             <a href="#">privredno pravo</a>
                             <a href="#">imovinsko pravo</a>
@@ -85,11 +85,14 @@
                     
                 </ul>
 
-                <i class="fa-solid fa-bars-staggered nav__hamburger"></i>
+                <i class="fa-solid fa-bars-staggered nav__hamburger" id="hamburger"></i>
             </div>
         </div>
     </nav>
     <!-- Nav section ends -->
+
+
+
 
 
     <!-- Hero section starts -->
@@ -231,93 +234,109 @@
     <!-- Footer section starts -->
     <footer class="footer">
         <div class="footer__wrapper container">
+
             <article class="footer__item">
-                <a href="index.html" class="footer__logo">
-                    <img src="src/img/logo.png" alt="">
-                </a>
-                <p class="footer__p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+                <h3 class="footer__title">radno vreme</h3>
+                <ul class="footer__list">
+                    <li>Ponedeljak - <time>09-17h</time></li>
+                    <li>Utorak - <time>09-17h</time></li>
+                    <li>Sreda - <time>09-17h</time></li>
+                    <li>Četvrtak - <time>09-17h</time></li>
+                    <li>Petak - <time>09-17h</time></li>
+                    <li>Subota - Neradni dan</li>                    
+                    <li>Nedelja - Neradni dan</li>
+                </ul>
             </article>
+
             <article class="footer__item">
                 <h3 class="footer__title">linkovi</h3>
                 <ul class="footer__list">
-                    <li class="footer__list__item">
-                        <i class="fa-solid fa-angles-right"></i>
-                        <a href="#" class="footer__link">o nama</a>
+                    <li>
+                        <span class="fa-solid fa-angles-right"></span>
+                        <a href="#about" class="footer__link">O nama</a>
                     </li>
-                    <li class="footer__list__item">
-                        <i class="fa-solid fa-angles-right"></i>
-                        <a href="#" class="footer__link">blog</a>
+                    <li>
+                        <span class="fa-solid fa-angles-right"></span>
+                        <a href="#" class="footer__link">Blog</a>
                     </li>
-                    <li class="footer__list__item">
-                        <i class="fa-solid fa-angles-right"></i>
-                        <a href="#" class="footer__link">klijenti</a>
+                    <li>
+                        <span class="fa-solid fa-angles-right"></span>
+                        <a href="#clients" class="footer__link">Klijenti</a>
                     </li>
-                    <li class="footer__list__item">
-                        <i class="fa-solid fa-angles-right"></i>
-                        <a href="#" class="footer__link">kontakt</a>
+                    <li>
+                        <span class="fa-solid fa-angles-right"></span>
+                        <a href="#contact" class="footer__link">Kontakt</a>
                     </li>
                 </ul>
             </article>
+
             <article class="footer__item">
                 <h3 class="footer__title">pravne usluge</h3>
                 <ul class="footer__list">
-                    <li class="footer__list__item">
-                        <i class="fa-solid fa-angles-right"></i>
-                        <a href="#" class="footer__link">radno pravo</a>
+                    <li>
+                        <span class="fa-solid fa-angles-right"></span>
+                        <a href="#" class="footer__link">Radno pravo</a>
                     </li>
-                    <li class="footer__list__item">
-                        <i class="fa-solid fa-angles-right"></i>
-                        <a href="#" class="footer__link">nasledno pravo</a>
+                    <li>
+                        <span class="fa-solid fa-angles-right"></span>
+                        <a href="#" class="footer__link">Nasledno pravo</a>
                     </li>
-                    <li class="footer__list__item">
-                        <i class="fa-solid fa-angles-right"></i>
-                        <a href="#" class="footer__link">porodično pravo</a>
+                    <li>
+                        <span class="fa-solid fa-angles-right"></span>
+                        <a href="#" class="footer__link">Porodično pravo</a>
                     </li>
-                    <li class="footer__list__item">
-                        <i class="fa-solid fa-angles-right"></i>
-                        <a href="#" class="footer__link">imovinsko pravo</a>
+                    <li>
+                        <span class="fa-solid fa-angles-right"></span>
+                        <a href="#" class="footer__link">Imovinsko pravo</a>
                     </li>
-                    <li class="footer__list__item">
-                        <i class="fa-solid fa-angles-right"></i>
-                        <a href="#" class="footer__link">privredno pravo</a>
+                    <li>
+                        <span class="fa-solid fa-angles-right"></span>
+                        <a href="#" class="footer__link">Privredno pravo</a>
                     </li>
-                    <li class="footer__list__item">
-                        <i class="fa-solid fa-angles-right"></i>
-                        <a href="#" class="footer__link">kazneno pravo</a>
+                    <li>
+                        <span class="fa-solid fa-angles-right"></span>
+                        <a href="#" class="footer__link">Kazneno pravo</a>
                     </li>
                 </ul>
             </article>
+
             <article class="footer__item">
                 <h3 class="footer__title">Kontakt</h3>
-                <div class="footer__contact">
-                    <span>Telefon:</span>
-                    <a href="" class="footer__link">888 123-4587</a>
-                </div>
-                <div class="footer__contact">
-                    <span>Adresa:</span>
-                    <a href="" class="footer__link">888 123-4587</a>
-                </div>
-                <div class="footer__contact">
-                    <span>Email:</span>
-                    <a href="" class="footer__link">888 123-4587</a>
-                </div>
-                <div class="footer__contact">
-                    <span>Linkedin:</span>
-                    <a href="" class="footer__link">888 123-4587</a>
-                </div>
-                <div class="footer__contact">
-                    <span>Instagram:</span>
-                    <a href="" class="footer__link">888 123-4587</a>
-                </div>
-                <div class="footer__contact">
-                    <span>Facebook:</span>
-                    <a href="" class="footer__link">888 123-4587</a>
-                </div>
+                <ul class="footer__list">
+                    <li>
+                        Telefon:
+                        <a href="tel:+381 60 31 32 994" class="footer__link">+381 60 31 32 994</a>
+                    </li>
+                    <li>
+                        Adresa:
+                        <a href="https://maps.app.goo.gl/rJCCgAY5VmrCv8dz5" class="footer__link"> Bulevar kralja Aleksandra 195a, Beograd</a>
+                    </li>
+                    <li>
+                        Email:
+                        <a href="mailto:advokatvladic@gmail.com" class="footer__link">advokatvladic@gmail.com</a>
+                    </li>
+                    <li>
+                        Linkedin:
+                        <a href="https://www.linkedin.com/in/nenad-vladi%C4%87-801a46167/" class="footer__link">Nenad Vladić</a>
+                    </li>
+                    <li>
+                        Facebook:
+                        <a href="https://www.facebook.com/vladicnenad" class="footer__link">Nenad Vladić</a>
+                    </li>
+                    <li>
+                        Instagram:
+                        <a href="https://www.instagram.com/adv.vladic/" class="footer__link">adv.vladic</a>
+                    </li>
+                </ul>
+             
             </article>
         </div>
     </footer>
     <!-- Footer section ends -->
 
+
+    <!-- Custom JS -->
+     <script src="src/js/main.js"></script>
 </body>
 
 </html>

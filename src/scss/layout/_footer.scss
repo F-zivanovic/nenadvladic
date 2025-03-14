@@ -8,28 +8,25 @@
     &__wrapper{
         @include flex(space-between, flex-start, wrap);
         row-gap: 2rem;
+
+        @include rwd(992){ flex-direction: column; }
     }
 
-    &__item{
-        flex: 0 0 22%;
-    }
-
-    &__logo{
-        width: 200px;
-    }
-
-    &__p{
-        font-size: 15px;
-        color: #bbb9b9;
-        margin-top: 1.6em;
-    }
+    &__item{ flex: 0 0 22%; }
 
     &__title{
-        font-size: 24px;
         font-size: 1.6rem;
         font-weight: 500;
         color: #ebebeb;
         margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 1rem;
+
+        &::before{
+            @include position(absolute, auto, auto, 0, 0, 50px, 2px);
+            background: $secondary-color;
+            content: "";
+        }
     }
 
     &__list{
@@ -46,22 +43,7 @@
     &__link{
         color: #bbb9b9;
         font-size: 15px;
-        text-transform: capitalize;
 
-        &:hover{
-            color: $secondary-color;
-        }
-    }
-
-    &__contact{
-
-        &:not(:last-child){
-            margin-bottom: 0.5rem;
-        }
-
-        span{
-            color: $secondary-color;
-            margin-right: 0.4rem;
-        }
+        &:hover{ color: $secondary-color; }
     }
 }
